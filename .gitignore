@@ -1,0 +1,21 @@
+# Ignore macOS system files
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Binaries
+dist
+
+# Dependency directories
+node_modules/
+
+# Code coverage
+/coverage
+
+# Caches
+.npm
+.eslintcache
+.cache

@@ -1,0 +1,45 @@
+{
+  "name": "typescript-react-parcel-electron",
+  "productName": "Ian's Boilerplate",
+  "version": "1.0.0",
+  "description": "A Typescript + React + Parcel + Electron Boilerplate",
+  "main": "./src/main.js",
+  "scripts": {
+    "build": "parcel build ./src/index.html --public-url ./ --out-dir ./dist",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianpaschal/typescript-react-parcel-electron.git"
+  },
+  "author": {
+    "name": "Ian Paschal",
+    "url": "https://github.com/ianpaschal"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ianpaschal/typescript-react-parcel-electron/issues"
+  },
+  "keywords": [
+    "electron",
+    "boilerplate",
+    "react",
+    "typescript",
+    "parcel"
+  ],
+  "homepage": "https://github.com/ianpaschal/typescript-react-parcel-electron#readme",
+  "devDependencies": {
+    "@types/node": "^8.0.2",
+    "@types/react": "^16.0.5",
+    "@types/react-dom": "16.0.3",
+    "electron": "1.8.4",
+    "eslint": "^5.5.0",
+    "parcel-bundler": "^1.9.7",
+    "typescript": "^2.4.1",
+    "typescript-eslint-parser": "^18.0.0"
+  },
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}
