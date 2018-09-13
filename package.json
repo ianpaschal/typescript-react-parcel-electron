@@ -6,7 +6,8 @@
   "main": "./src/main.js",
   "scripts": {
     "build": "parcel build ./src/index.html --public-url ./ --out-dir ./dist",
-    "start": "electron ."
+    "start": "electron .",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
