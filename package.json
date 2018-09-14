@@ -3,9 +3,11 @@
   "productName": "Ian's Boilerplate",
   "version": "1.0.0",
   "description": "A Typescript + React + Parcel + Electron Boilerplate",
-  "main": "./src/main.js",
+  "main": "./dist/main.js",
   "scripts": {
-    "build": "parcel build ./src/index.html --public-url ./ --out-dir ./dist",
+    "build": "npm run build-main && npm run build-renderer",
+    "build-main": "tsc ./src/main.ts --outDir ./dist",
+    "build-renderer": "parcel build ./src/renderer.html --public-url ./ --out-dir ./dist",
     "start": "electron ."
   },
   "repository": {

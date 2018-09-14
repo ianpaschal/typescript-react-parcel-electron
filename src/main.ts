@@ -1,11 +1,9 @@
-// Basic init
-const electron = require( "electron" );
-const { app, BrowserWindow } = electron;
-const path = require( "path" );
-const url = require( "url" );
+import { app, BrowserWindow } from "electron";
+import * as path from "path";
+import * as url from "url";
 
-const startUrl = process.env.ELECTRON_START_URL || url.format({
-	pathname: path.join( __dirname, "../dist/index.html" ),
+const startUrl = url.format({
+	pathname: path.join( __dirname, "../dist/renderer.html" ),
 	protocol: "file:",
 	slashes: true
 });
@@ -30,8 +28,6 @@ app.on( "ready", () => {
 
 // Quit when all windows are closed.
 app.on( "window-all-closed", () => {
-	// On OS X it is common for applications and their menu bar
-	// to stay active until the user quits explicitly with Cmd + Q
 	if ( process.platform !== "darwin" ) {
 		app.quit();
 	}
