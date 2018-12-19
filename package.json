@@ -7,7 +7,11 @@
   "scripts": {
     "build": "parcel build ./src/index.html --public-url ./ --out-dir ./dist",
     "start": "electron .",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build",
+    "package": "npm run build && build",
+    "package-win": "npm run build && build --win --x64",
+    "package-linux": "npm run build && build --linux",
+    "package-all": "npm run build && build -mwl"
   },
   "repository": {
     "type": "git",
@@ -34,6 +38,7 @@
     "@types/react": "^16.0.5",
     "@types/react-dom": "16.0.3",
     "electron": "1.8.8",
+    "electron-builder": "^20.28.4",
     "eslint": "^5.5.0",
     "parcel-bundler": "^1.9.7",
     "typescript": "^2.4.1",
@@ -42,5 +47,44 @@
   "dependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
+  },
+  "build": {
+    "productName": "Ian's Boilerplate",
+    "appId": "io.github.ianpaschal",
+    "copyright": "Copyright ©2018 Ian Paschal",
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    },
+    "files": [
+      "dist/",
+      "node_modules/",
+      "src/main.js",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "resources",
+      "output": "bin"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage"
+      ]
+    }
   }
 }
