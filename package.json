@@ -31,7 +31,7 @@
   ],
   "homepage": "https://github.com/ianpaschal/typescript-react-parcel-electron#readme",
   "dependencies": {
-    "react": "^16.8.6",
+    "react": "^16.13.0",
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
